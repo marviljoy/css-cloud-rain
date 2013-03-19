@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Cloud Rain</title>
+<style>
+.rainy-weather {
+  top:100px;
+  margin: 3em auto;
+  width: 350px;
+  height: 400px;
+  position: relative;
+}
+
+.cloud-main {
+  width: 350px;
+  height: 130px;
+  background: #ccc;
+  border-radius: 100em;
+  position: absolute;
+  z-index: 100;
+  top: 50px;
+  box-shadow: 0 3px 5px rgba(0,0,0, 0.3);
+   -webkit-box-shadow: 0 3px 5px rgba(0,0,0, 0.3);
+  -moz-box-shadow:0 3px 5px rgba(0,0,0, 0.3);
+ 
+  background: linear-gradient(#F2F2F2 70%, #E5E5E5);
+  background:  -webkit-linear-gradient(#F2F2F2 70%, #E5E5E5);
+  background:  -moz-linear-gradient(#F2F2F2 70%, #E5E5E5);
+
+}
+
+.cloud-center {
+  width: 180px;
+  height: 180px;
+  margin: 0 auto;
+  background: #F2F2F2;
+  position: absolute;
+  border-radius: 100em;
+  top: -30px;
+  right: 50px;
+}
+
+.cloud-left {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+  background: #F2F2F2;
+  position: absolute;
+  border-radius: 100em;
+  top: 0;
+  right: 160px;
+}
+
+.droplet {
+  width: 18px;
+  height: 35px;
+  background: radial-gradient(center, farthest-corner,  #A4DDF5, #76CBF1);
+  background:  -webkit-radial-gradient(center, farthest-corner,  #A4DDF5, #76CBF1);
+  background:  -moz-radial-gradient(center, farthest-corner,  #A4DDF5, #76CBF1);
+
+  position: absolute;  
+  border-radius: 10px 10px 10px 10px / 30px 30px 10px 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0, 0.1);
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0, 0.1);
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0, 0.1);
+}
+
+.droplet1, .droplet4 {
+  right: 70px;
+  top: 100px; 
+}
+
+.droplet2, .droplet5 {
+  right: 140px;
+  top: 130px;
+}
+
+.droplet3, .droplet6 {
+  right: 190px;
+  top: 100px;
+}
+
+
+.droplet1, .droplet2, .droplet3 {
+  animation: rain2 linear 1.5s infinite .75s;
+  -moz-animation: rain2 linear 1.5s infinite .75s;
+  -webkit-animation: rain2 linear 1.5s infinite .75s;
+}
+
+.droplet4, .droplet5, .droplet6 {
+  animation: rain linear 1.5s infinite;
+  -moz-animation: rain linear 1.5s infinite;
+  -webkit-animation: rain linear 1.5s infinite;
+}
+
+
+@-webkit-keyframes rain {
+  0% {
+    transform: rotate(30deg) translate(0,0);
+	-webkit-transform: rotate(30deg) translate(0,0);
+   -moz-transform: rotate(30deg) translate(0,0);
+    opacity: 1;
+  }
+  
+  90% {
+    transform: rotate(30deg) translate(0, 130px);
+	-webkit-transform: rotate(30deg) translate(0, 130px);
+   -moz-transform: rotate(30deg) translate(0, 130px);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: rotate(30deg) translate(0, 140px);
+	-webkit-transform: rotate(30deg) translate(0, 140px);
+   -moz-transform: rotate(30deg) translate(0, 140px);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes rain {
+  0% {
+    transform: rotate(30deg) translate(0,0);
+	-webkit-transform: rotate(30deg) translate(0,0);
+   -moz-transform: rotate(30deg) translate(0,0);
+    opacity: 1;
+  }
+  
+  90% {
+    transform: rotate(30deg) translate(0, 130px);
+	-webkit-transform: rotate(30deg) translate(0, 130px);
+   -moz-transform: rotate(30deg) translate(0, 130px);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: rotate(30deg) translate(0, 140px);
+	-webkit-transform: rotate(30deg) translate(0, 140px);
+   -moz-transform: rotate(30deg) translate(0, 140px);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rain2 {
+  0% {
+    transform: rotate(30deg) translate(0,0);
+	-webkit-transform: rotate(30deg) translate(0,0);
+   -moz-transform: rotate(30deg) translate(0,0);
+    opacity: 1;
+  }
+  
+  90% {
+    transform: rotate(30deg) translate(0, 130px);
+	-webkit-transform: rotate(30deg) translate(0, 130px);
+   -moz-transform: rotate(30deg) translate(0, 130px);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: rotate(30deg) translate(0, 140px);
+	-webkit-transform: rotate(30deg) translate(0, 140px);
+   -moz-transform: rotate(30deg) translate(0, 140px);
+    opacity: 0;
+  }
+}
+
+@-moz-keyframes rain2 {
+  0% {
+    transform: rotate(30deg) translate(0,0);
+	-webkit-transform: rotate(30deg) translate(0,0);
+   -moz-transform: rotate(30deg) translate(0,0);
+    opacity: 1;
+  }
+  
+  90% {
+    transform: rotate(30deg) translate(0, 130px);
+	-webkit-transform: rotate(30deg) translate(0, 130px);
+   -moz-transform: rotate(30deg) translate(0, 130px);
+    opacity: 1;
+  }
+  
+  100% {
+    transform: rotate(30deg) translate(0, 140px);
+	-webkit-transform: rotate(30deg) translate(0, 140px);
+   -moz-transform: rotate(30deg) translate(0, 140px);
+    opacity: 0;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="rainy-weather">
+<div class="cloud-main"></div>
+<div class="cloud-center"></div>
+<div class="cloud-left"></div>
+<div class="droplet droplet1"></div>
+<div class="droplet droplet2"></div>
+<div class="droplet droplet3"></div>
+<div class="droplet droplet4"></div>
+<div class="droplet droplet5"></div>
+<div class="droplet droplet6"></div>
+</div>
+<div style="float:right;"><b>fb/marviljoy<b><br /><b>marvil.joy@gmail.com</b><br /><b>github.com/marviljoy</b></div>
+</body>
+</html>
